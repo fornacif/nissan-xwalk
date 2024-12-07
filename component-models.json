@@ -163,6 +163,11 @@
     "id": "hero",
     "fields": [
       {
+        "component": "tab",
+        "label": "Tab 1",
+        "name": "tab1"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image1",
@@ -170,11 +175,49 @@
         "multi": false
       },
       {
+        "component": "text",
+        "name": "text1",
+        "value": "",
+        "label": "Text 1",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt1",
+        "label": "Alt 1",
+        "value": ""
+      },
+      {
+        "component": "tab",
+        "label": "Tab 2",
+        "name": "tab2"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image2",
         "label": "Image 2",
         "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text2",
+        "value": "",
+        "label": "Text 2",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt1",
+        "label": "Alt 1",
+        "value": ""
+      },
+      {
+        "component": "tab",
+        "label": "Tab 3",
+        "name": "tab3"
       },
       {
         "component": "reference",
@@ -185,18 +228,19 @@
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "name": "text3",
+        "value": "",
+        "label": "Text 3",
+        "valueType": "string"
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt3",
+        "label": "Alt 3",
+        "value": ""
       }
+      
     ]
   }
 ]
