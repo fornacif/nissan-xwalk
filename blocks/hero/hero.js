@@ -10,7 +10,7 @@ export default async function decorate(block) {
     const content = document.createRange().createContextualFragment(`
         <div class="hero-banner" id="hero-banner">
         <div class="slide active">
-            <div class="slide-bg" style="background-image: url('/api/placeholder/1920/1080')"></div>
+            <div class="slide-bg" style="background-image: url('${image2Path}')"></div>
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <div class="slide-text">
@@ -28,7 +28,7 @@ export default async function decorate(block) {
         </div>
 
         <div class="slide">
-            <div class="slide-bg" style="background-image: url('/api/placeholder/1920/1080')"></div>
+            <div class="slide-bg" style="background-image: url('${image2Path}')"></div>
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <div class="slide-text">
@@ -46,7 +46,7 @@ export default async function decorate(block) {
         </div>
 
         <div class="slide">
-            <div class="slide-bg" style="background-image: url('/api/placeholder/1920/1080')"></div>
+            <div class="slide-bg" style="background-image: url('${image3Path}'"></div>
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <div class="slide-text">
