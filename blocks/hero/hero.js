@@ -3,15 +3,15 @@ import { readBlockConfig } from '../../scripts/aem.js';
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
-    const image1Path = config.image1;
-    const image2Path = config.image2;
-    const image3Path = config.image3;
+    const image1Path = config.image1.replace('width=750', 'width=3000');
+    const image2Path = config.image2.replace('width=750', 'width=3000');
+    const image3Path = config.image3.replace('width=750', 'width=3000');
 
     const content = document.createRange().createContextualFragment(`
         <div class="hero-banner">
             <div class="carousel">
                 <div class="slide active">
-                    <img src="${image1Path}&width=3000" alt="Luxury Sedan" class="slide-image">
+                    <img src="${image1Path}" alt="Luxury Sedan" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">2024 Luxury Sedan</h2>
                         <p class="slide-price">Starting at $45,000</p>
