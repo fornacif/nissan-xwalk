@@ -180,7 +180,7 @@
         "name": "imageAlt1",
         "label": "Alt 1",
         "value": ""
-      }
+      },
       {
         "component": "text",
         "name": "title1",
@@ -213,7 +213,7 @@
         "name": "imageAlt2",
         "label": "Alt 2",
         "value": ""
-      }
+      },
       {
         "component": "text",
         "name": "title2",
@@ -246,7 +246,7 @@
         "name": "imageAlt3",
         "label": "Alt 3",
         "value": ""
-      }
+      },
       {
         "component": "text",
         "name": "title3",
