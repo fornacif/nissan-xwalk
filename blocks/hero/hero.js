@@ -22,7 +22,7 @@ export default async function decorate(block) {
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="${image2Path}&width=3000" alt="Electric SUV" class="slide-image">
+                    <img src="${image2Path}" alt="Electric SUV" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">Electric SUV</h2>
                         <p class="slide-price">Starting at $55,000</p>
@@ -33,7 +33,7 @@ export default async function decorate(block) {
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="${image3Path}&width=3000" alt="Sports Car" class="slide-image">
+                    <img src="${image3Path}" alt="Sports Car" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">Sports Coupe</h2>
                         <p class="slide-price">Starting at $65,000</p>
