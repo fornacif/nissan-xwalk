@@ -3,18 +3,18 @@ import { readBlockConfig } from '../../scripts/aem.js';
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
-    const image1Path = config.image1.replace('width=750', 'width=3000');
-    const image2Path = config.image2.replace('width=750', 'width=3000');
-    const image3Path = config.image3.replace('width=750', 'width=3000');
+    const image1 = config.image1.replace('width=750', 'width=3000');
+    const image2 = config.image2.replace('width=750', 'width=3000');
+    const image3 = config.image3.replace('width=750', 'width=3000');
 
     const content = document.createRange().createContextualFragment(`
         <div class="hero-banner">
             <div class="carousel">
                 <div class="slide active">
-                    <img src="${image1Path}" alt="Luxury Sedan" class="slide-image">
+                    <img src="${image1}" alt="${config.title1}" class="slide-image">
                     <div class="slide-content">
-                        <h2 class="slide-title">2024 Luxury Sedan</h2>
-                        <p class="slide-price">Starting at $45,000</p>
+                        <h2 class="slide-title">${config.title1}</h2>
+                        <p class="slide-price">${config.subtitle1}</p>
                         <div class="cta-container">
                             <button class="cta-button cta-primary">Configure Now</button>
                             <button class="cta-button cta-secondary">Discover More</button>
@@ -22,10 +22,10 @@ export default async function decorate(block) {
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="${image2Path}" alt="Electric SUV" class="slide-image">
+                    <img src="${image2}" alt="${config.title2}" class="slide-image">
                     <div class="slide-content">
-                        <h2 class="slide-title">Electric SUV</h2>
-                        <p class="slide-price">Starting at $55,000</p>
+                        <h2 class="slide-title">${config.title2}</h2>
+                        <p class="slide-price">${config.subtitle3}</p>
                         <div class="cta-container">
                             <button class="cta-button cta-primary">Configure Now</button>
                             <button class="cta-button cta-secondary">Discover More</button>
@@ -33,10 +33,10 @@ export default async function decorate(block) {
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="${image3Path}" alt="Sports Car" class="slide-image">
+                    <img src="${image3}" alt="${config.title3}" class="slide-image">
                     <div class="slide-content">
-                        <h2 class="slide-title">Sports Coupe</h2>
-                        <p class="slide-price">Starting at $65,000</p>
+                        <h2 class="slide-title">${config.title3}</h2>
+                        <p class="slide-price">${config.subtitle3}</p>
                         <div class="cta-container">
                             <button class="cta-button cta-primary">Configure Now</button>
                             <button class="cta-button cta-secondary">Discover More</button>
