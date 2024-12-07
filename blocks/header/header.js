@@ -1,10 +1,13 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
-
 export default async function decorate(block) {
+  let logo = '/icons/logo.svg';
+  console.info(window.location.host)
+  if (window.location.host.includes('author')) {
+    logo = `/content/nissan-xwalk.resource${logo}`
+  }
+
   const content = document.createRange().createContextualFragment(`
     <nav class="nav-menu">
-        <a href="#" class="nav-logo"><img src="/content/nissan-xwalk.resource/icons/logo.svg"></img></a>
+        <a href="#" class="nav-logo"><img src="${logo}"></img></a>
         <button class="hamburger">
             <span></span>
             <span></span>
