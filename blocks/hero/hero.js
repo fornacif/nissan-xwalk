@@ -3,6 +3,10 @@ import { readBlockConfig } from '../../scripts/aem.js';
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
+    const image1Path = config.image1;
+    const image2Path = config.image2;
+    const image3Path = config.image3;
+
     const content = document.createRange().createContextualFragment(`
         <div class="hero-banner" id="hero-banner">
         <div class="slide active">
@@ -19,7 +23,7 @@ export default async function decorate(block) {
                         <button class="cta-button cta-secondary">Configure Now</button>
                     </div>
                 </div>
-                <img src="/content/dam/nissan-xwalk/QashqaiDesktop_nov_GNP.jpg" alt="GT-R" class="vehicle-image">
+                <img src="${image1Path}" alt="GT-R" class="vehicle-image">
             </div>
         </div>
 
@@ -37,7 +41,7 @@ export default async function decorate(block) {
                         <button class="cta-button cta-secondary">Configure Now</button>
                     </div>
                 </div>
-                <img src="/content/dam/nissan-xwalk/AriyaNismoDesktop_GNP.jpg" alt="Electric SUV" class="vehicle-image">
+                <img src="${image2Path}" alt="Electric SUV" class="vehicle-image">
             </div>
         </div>
 
@@ -55,7 +59,7 @@ export default async function decorate(block) {
                         <button class="cta-button cta-secondary">Configure Now</button>
                     </div>
                 </div>
-                <img src="/content/dam/nissan-xwalk/jukeHEVDesktop_GNP.jpg" alt="Luxury Sedan" class="vehicle-image">
+                <img src="${image3Path}" alt="Luxury Sedan" class="vehicle-image">
             </div>
         </div>
 
