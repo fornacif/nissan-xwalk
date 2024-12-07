@@ -5,7 +5,7 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const content = document.createRange().createContextualFragment(`
     <nav class="nav-menu">
-        <a href="#" class="nav-logo"></a>
+        <a href="#" class="nav-logo"><img src="/content/dam/nissan-xwalk/logo.svg"></img></a>
         <button class="hamburger">
             <span></span>
             <span></span>
