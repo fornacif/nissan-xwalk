@@ -19,7 +19,7 @@ export default async function decorate(block) {
                         <button class="cta-button cta-secondary">Configure Now</button>
                     </div>
                 </div>
-                <img src="/api/placeholder/800/500" alt="GT-R" class="vehicle-image">
+                <img src="/content/dam/nissan-xwalk/QashqaiDesktop_nov_GNP.jpg" alt="GT-R" class="vehicle-image">
             </div>
         </div>
 
@@ -37,7 +37,7 @@ export default async function decorate(block) {
                         <button class="cta-button cta-secondary">Configure Now</button>
                     </div>
                 </div>
-                <img src="/api/placeholder/800/500" alt="Electric SUV" class="vehicle-image">
+                <img src="/content/dam/nissan-xwalk/AriyaNismoDesktop_GNP.jpg" alt="Electric SUV" class="vehicle-image">
             </div>
         </div>
 
@@ -55,7 +55,7 @@ export default async function decorate(block) {
                         <button class="cta-button cta-secondary">Configure Now</button>
                     </div>
                 </div>
-                <img src="/api/placeholder/800/500" alt="Luxury Sedan" class="vehicle-image">
+                <img src="/content/dam/nissan-xwalk/jukeHEVDesktop_GNP.jpg" alt="Luxury Sedan" class="vehicle-image">
             </div>
         </div>
 
@@ -82,6 +82,8 @@ export default async function decorate(block) {
 
     block.textContent = '';
     block.append(content);
+
+    new CarouselHero();
 }
 
 class CarouselHero {
@@ -102,7 +104,7 @@ class CarouselHero {
         this.dots.forEach((dot, index) => {
             dot.addEventListener('click', () => this.goToSlide(index));
         });
-        
+
         this.startAutoplay();
 
         document.querySelector('.hero-banner').addEventListener('mouseenter', () => this.stopAutoplay());
@@ -143,6 +145,5 @@ class CarouselHero {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    new CarouselHero();
-});
+    
+
