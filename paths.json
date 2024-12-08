@@ -5,6 +5,7 @@
     "/content/nissan-xwalk/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/nissan-xwalk/"
+    "/content/nissan-xwalk/",
+    "/content/dam/nissan-xwalk/"
   ]
 }
