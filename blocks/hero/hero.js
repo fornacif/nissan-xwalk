@@ -59,10 +59,6 @@ export default async function decorate(block) {
     block.textContent = '';
     block.append(content);
 
-    initCarousel();
-}
-
-function initCarousel() {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.carousel-dot');
     const prevBtn = document.getElementById('prevBtn');
@@ -127,5 +123,5 @@ function initCarousel() {
     carousel.addEventListener('mouseenter', stopAutoplay);
     carousel.addEventListener('mouseleave', startAutoplay);
 }
-    
+
 

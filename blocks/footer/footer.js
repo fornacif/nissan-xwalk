@@ -1,4 +1,3 @@
-
 export default async function decorate(block) {
   const content = document.createRange().createContextualFragment(`
     <footer class="footer">

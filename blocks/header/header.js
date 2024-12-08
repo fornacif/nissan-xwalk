@@ -24,10 +24,6 @@ export default async function decorate(block) {
   block.textContent = '';
   block.append(content);
 
-  initMenu();
-}
-
-function initMenu() {
   // Mobile menu functionality
   const hamburger = document.querySelector('.hamburger');
   const navItems = document.querySelector('.nav-items');
