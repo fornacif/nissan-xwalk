@@ -3,8 +3,10 @@ import { readBlockConfig } from '../../scripts/aem.js';
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
+    const background = config.background.replace('width=750&format=jpeg', 'width=2500&format=webp');
+
     const content = document.createRange().createContextualFragment(`
-        <section class="search-section">
+        <section class="search-section" style="background: url('${background}') center/cover no-repeat">
             <div class="search-content">
                 <h2 class="search-title">Find Your Perfect Vehicle</h2>
                 <p class="search-subtitle">Search through our extensive collection of premium vehicles</p>
