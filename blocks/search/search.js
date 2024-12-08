@@ -4,11 +4,12 @@ export default async function decorate(block) {
     const config = readBlockConfig(block);
 
     const background = config.background.replace('width=750&format=jpeg', 'width=2500&format=webp');
+    
 
     const content = document.createRange().createContextualFragment(`
         <section class="search-section" style="background: url('${background}') center/cover no-repeat">
             <div class="search-content">
-                <h2 class="search-title" data-aue-prop="title" data-aue-type="text">Find Your Perfect Vehicle</h2>
+                <h2 class="search-title" data-aue-prop="title" data-aue-type="text">${config.title}</h2>
                 <p class="search-subtitle">Search through our extensive collection of premium vehicles</p>
                 
                 <div class="search-container">
