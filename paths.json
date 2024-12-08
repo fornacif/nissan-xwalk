@@ -7,6 +7,6 @@
   ],
   "includes": [
     "/content/nissan-xwalk/",
-    "/content/dam/nissan-xwalk/images"
+    "/content/dam/nissan-xwalk/images/"
   ]
 }
