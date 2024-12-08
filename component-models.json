@@ -265,7 +265,7 @@
         "name": "background",
         "label": "Background Image",
         "multi": false
-      },
+      }
     ]
   }
 ]
