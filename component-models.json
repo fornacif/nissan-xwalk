@@ -241,5 +241,24 @@
         "value": ""
       }   
     ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "cta",
+        "value": "",
+        "label": "See all",
+        "valueType": "string"
+      }   
+    ]
   }
 ]
