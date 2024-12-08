@@ -1,6 +1,5 @@
 export default async function decorate(block) {
   let logo = '/icons/logo.svg';
-  console.info(window.location.host)
   if (window.location.host.includes('author')) {
     logo = `/content/nissan-xwalk.resource${logo}`
   }
