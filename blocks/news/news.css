@@ -1,7 +1,7 @@
 .hero-news {
     position: relative;
     height: 450px;
-    background: url('/api/placeholder/1920/600') center/cover no-repeat;
+    /*background: url('/api/placeholder/1920/600') center/cover no-repeat;*/
     display: flex;
     align-items: center;
     justify-content: flex-start;

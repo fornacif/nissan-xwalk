@@ -5,7 +5,7 @@ export default async function decorate(block) {
 
     const content = document.createRange().createContextualFragment(`
         <article class="article-card">
-            <img src="/api/placeholder/300/300" alt="Nissan Warranty" class="article-image">
+            <img  alt="Nissan Warranty" class="article-image">
             <div class="article-content">
                 <div class="article-date">December 9, 2024</div>
                 <span class="article-category">Services</span>
