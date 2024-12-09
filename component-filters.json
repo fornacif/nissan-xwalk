@@ -23,8 +23,7 @@
   {
     "id": "cards",
     "components": [
-      "card",
-      "article"
+      "card"
     ]
   },
   {
