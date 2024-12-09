@@ -243,25 +243,6 @@
     ]
   },
   {
-    "id": "news",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Title",
-        "valueType": "string"
-      }  
-    ]
-  },
-  {
     "id": "article",
     "fields": [
       {
