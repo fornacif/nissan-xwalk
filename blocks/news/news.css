@@ -1,6 +1,6 @@
 .hero-news {
     position: relative;
-    height: 70Opx;
+    height: 450px;
     background: url('/api/placeholder/1920/600') center/cover no-repeat;
     display: flex;
     align-items: center;
