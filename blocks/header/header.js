@@ -14,8 +14,7 @@ export default async function decorate(block) {
         </button>
         <ul class="nav-items">
             <li><a href="#" class="nav-item">Models</a></li>
-            <li><a href="#" class="nav-item">Build & Price</a></li>
-            <li><a href="#" class="nav-item">Shopping Tools</a></li>
+            <li><a href="/news" class="nav-item">News</a></li>
             <li><a href="#" class="nav-item">Find a Dealer</a></li>
         </ul>
     </nav>
