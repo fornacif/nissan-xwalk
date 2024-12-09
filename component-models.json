@@ -242,6 +242,26 @@
       }   
     ]
   },
+  ,
+  {
+    "id": "news",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image1",
+        "label": "Image 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      }  
+    ]
+  },
   {
     "id": "search",
     "fields": [
