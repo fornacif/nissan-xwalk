@@ -5,6 +5,11 @@
   font-family: 'Arial', sans-serif;
 }
 
+body {
+  background: #111827;
+  color: #fff;
+}
+
 .nav-menu {
   position: fixed;
   top: 0;

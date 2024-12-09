@@ -27,6 +27,12 @@
     ]
   },
   {
+    "id": "news",
+    "components": [
+      "article"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
