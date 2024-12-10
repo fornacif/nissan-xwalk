@@ -1,15 +1,11 @@
 
 export default async function decorate(block) {
     const isAuthor = window.location.host.includes('author');
-
-    let logo = '/icons/logo.svg';
-    if (isAuthor) {
-        logo = `/content/nissan-xwalk.resource${logo}`
-    }
+    let logoImage = isAuthor ? '/content/nissan-xwalk.resource/icons/logo.svg': '/icons/logo.svg';
 
     const content = document.createRange().createContextualFragment(`
     <nav class="nav-menu">
-        <a href="./home.html" class="nav-logo"><img src="${logo}"></img></a>
+        <a href="./home.html" class="nav-logo"><img src="${logoImage}"></img></a>
         <button class="hamburger">
             <span></span>
             <span></span>
@@ -22,7 +18,6 @@ export default async function decorate(block) {
         </ul>
     </nav>
     `);
-
 
     block.textContent = '';
     block.append(content);
