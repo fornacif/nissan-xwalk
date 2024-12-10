@@ -33,7 +33,7 @@ export default async function decorate(block) {
           </div>
     `);
 
-    block.textContent = '';
+    //block.textContent = '';
     block.append(content);
 
     
