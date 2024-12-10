@@ -18,7 +18,7 @@ export default async function decorate(block) {
             <div class="article-content">
                 <div class="article-date">December 9, 2024</div>
                 <span class="article-category">Services</span>
-                <h2 class="article-title">${title}</h2>
+                <h2 class="article-title" data-aue-prop="title" data-aue-type="text">${title}</h2>
                 <p class="article-excerpt">Launched last year, the Nissan Privilege Warranty program has already rewarded 50,000 customers for their loyalty. Deployed across Nissan's dealer network, this offer has found widespread success.</p>
                 <a href="#" class="article-link">Read more</a>
             </div>`;
@@ -52,8 +52,6 @@ export default async function decorate(block) {
     articles.forEach(article => articleList.append(article));
 
     block.append(content);
-
-    
 }
 
 
