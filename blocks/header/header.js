@@ -9,7 +9,7 @@ export default async function decorate(block) {
 
     const content = document.createRange().createContextualFragment(`
     <nav class="nav-menu">
-        <a href="./index.html" class="nav-logo"><img src="${logo}"></img></a>
+        <a href="./home.html" class="nav-logo"><img src="${logo}"></img></a>
         <button class="hamburger">
             <span></span>
             <span></span>
