@@ -11,7 +11,7 @@ export default async function decorate(block) {
 
         articles.push(
             `<article class="article-card">
-                <img scr="${imageSrc}" alt="Nissan Warranty" class="article-image">
+                <img src="${imageSrc}" alt="Nissan Warranty" class="article-image">
                 <div class="article-content">
                     <div class="article-date">December 9, 2024</div>
                     <span class="article-category">Services</span>
