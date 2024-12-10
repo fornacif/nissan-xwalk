@@ -30,8 +30,8 @@ export default async function decorate(block) {
     var aElements = document.getElementsByClassName('nav-menu')[0].getElementsByTagName('a');
     for (const aElement of aElements) {
         if (isAuthor) {
-            aElement.href = '/index' ? '/' : aElement.href;
-            aElement.href = `/content/nissan-xwalk${aElement.href}.html`;
+            //aElement.href = '/index' ? '/' : aElement.href;
+            //aElement.href = `/content/nissan-xwalk${aElement.href}.html`;
         }
     }
 
