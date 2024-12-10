@@ -10,7 +10,7 @@ export default async function decorate(block) {
         const title = p ? p.textContent : "";
 
         articles.push(
-            `<article class="article-card">
+            `<article class="article-card" >
                 <img src="${imageSrc}" alt="Nissan Warranty" class="article-image">
                 <div class="article-content">
                     <div class="article-date">December 9, 2024</div>
@@ -23,23 +23,14 @@ export default async function decorate(block) {
       });
 
     const content = document.createRange().createContextualFragment(`
-        <section class="hero-news">
-            <div class="hero-news-content">
-                <div class="hero-news-subtitle">News & Innovations</div>
-                <h1 class="hero-news-title">Discover the latest from Nissan</h1>
-                <p class="hero-news-description">Stay informed about the latest innovations, events, and product launches from Nissan.</p>
-            </div>
-        </section>
-
-        <div class="articles-container">
-            <div class="articles-search">
-                <input type="text" placeholder="Search articles...">
-            </div>
-
-            <div class="article-list">
-                ${articles.join('')}
-            </div>
-        </div>
+        <div>
+            <div></div>
+            <div><p>article 1</p></div>
+          </div>
+          <div>
+            <div></div>
+            <div><p>article 2</p></div>
+          </div>
     `);
 
     block.textContent = '';
