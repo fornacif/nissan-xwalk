@@ -1,6 +1,8 @@
 
 export default async function decorate(block) {
     const isAuthor = window.location.host.includes('author');
+    const UEAuthorMode = window.hlx.aemRoot || window.location.href.includes('.html');
+    console.log('UEAuthorMode', UEAuthorMode);
     let logoImage = isAuthor ? '/content/nissan-xwalk.resource/icons/logo.svg': '/icons/logo.svg';
 
     const content = document.createRange().createContextualFragment(`
