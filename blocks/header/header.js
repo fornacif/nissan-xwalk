@@ -1,9 +1,7 @@
 
 export default async function decorate(block) {
-    const isAuthor = window.location.host.includes('author');
     const UEAuthorMode = window.hlx.aemRoot || window.location.href.includes('.html');
-    console.log('UEAuthorMode', UEAuthorMode);
-    let logoImage = isAuthor ? '/content/nissan-xwalk.resource/icons/logo.svg': '/icons/logo.svg';
+    let logoImage = UEAuthorMode ? '/content/nissan-xwalk.resource/icons/logo.svg': '/icons/logo.svg';
 
     const content = document.createRange().createContextualFragment(`
     <nav class="nav-menu">
@@ -23,14 +21,6 @@ export default async function decorate(block) {
 
     block.textContent = '';
     block.append(content);
-
-    var aElements = document.getElementsByClassName('nav-menu')[0].getElementsByTagName('a');
-    for (const aElement of aElements) {
-        if (isAuthor) {
-            //aElement.href = '/index' ? '/' : aElement.href;
-            //aElement.href = `/content/nissan-xwalk${aElement.href}.html`;
-        }
-    }
 
     // Mobile menu functionality
     const hamburger = document.querySelector('.hamburger');
