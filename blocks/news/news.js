@@ -22,7 +22,7 @@ export default async function decorate(block) {
                 <div class="article-date">${formattedDate}</div>
                 <span class="article-category">Services</span>
                 <h2 class="article-title" data-aue-prop="title" data-aue-type="text">${article.title}</h2>
-                <p class="article-excerpt" data-aue-prop="description" data-aue-type="text">${article.description.html}</p>
+                <p class="article-excerpt" data-aue-prop="description" data-aue-type="richtext">${article.description.html}</p>
                 <a href="#" class="article-link" data-aue-prop="cta" data-aue-type="text">${article.cta}</a>
             </div>`;
             articleElements.push(articleElement)
