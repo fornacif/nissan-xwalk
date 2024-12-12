@@ -10,7 +10,7 @@ export default async function decorate(block) {
         <section class="search-section" style="background: url('${background}') center/cover no-repeat">
             <div class="search-content">
                 <h2 class="search-title" data-aue-prop="title" data-aue-type="text">${config.title}</h2>
-                <p class="search-subtitle">Search through our extensive collection of premium vehicles</p>
+                <p class="search-subtitle" data-aue-prop="subtitle" data-aue-type="text">Search through our extensive collection of premium vehicles</p>
                 
                 <div class="search-container">
                     <input type="text" class="search-bar" placeholder="Search by model, year, or features...">
