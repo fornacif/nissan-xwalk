@@ -2,6 +2,31 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
 
+  const card = [];
+
+  [...block.children].forEach((row) => {
+    const img = row.querySelector('img');
+    const p = row.querySelector('p');
+
+    const imageSrc = img ? img.src : "";
+    const title = p ? p.textContent : "";
+    const wide = p ? p.textContent : "";
+
+    var card = document.createElement('div');
+    card.className = 'grid-box';
+    card.innerHTML = `
+        <div class="grid-box wide">
+            <img src="${imageSrc}" alt="Image Alt">
+            <div class="box-content">
+                <h2 class="box-title">${title}</h2>
+                <div class="arrow"></div>
+            </div>
+        </div>`
+    moveInstrumentation(row, card);
+
+    cards.push(card)
+  });
+
   const content = document.createRange().createContextualFragment(`
     <div class="grid-container">
         <div class="grid-box wide">
@@ -35,6 +60,6 @@ export default function decorate(block) {
     </div>
   `);
 
-  block.textContent = '';
-  block.append(content);
+  //block.textContent = '';
+  //block.append(content);
 }
