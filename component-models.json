@@ -122,11 +122,18 @@
         "multi": false
       },
       {
-        "component": "richtext",
-        "name": "text",
+        "component": "text",
+        "name": "title",
         "value": "",
-        "label": "Text",
+        "label": "Title",
         "valueType": "string"
+      },
+      {
+        "component": "boolean",
+        "name": "wide",
+        "value": "",
+        "label": "Wide",
+        "valueType": "boolean"
       }
     ]
   },
