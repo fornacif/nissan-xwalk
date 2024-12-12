@@ -1,18 +1,17 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
+import { readBlockConfig } from '../../scripts/aem.js';
 import { optimizeImageSrc } from '../../scripts/extension.js';
 
 export default async function decorate(block) {
+    const config = readBlockConfig(block);
 
     const articles = [];
 
-    [...block.children].forEach((row) => {
-        const img = row.querySelector('img');
-        const p = row.querySelector('p');
 
-        const imageSrc = img ? img.src : "";
-        const title = p ? p.textContent : "";
 
-        var article = document.createElement('article');
+  
+
+        /*var article = document.createElement('article');
         article.className = 'article-card';
         article.innerHTML = `
             <img src="${imageSrc}" alt="Nissan Warranty" class="article-image">
@@ -25,15 +24,15 @@ export default async function decorate(block) {
             </div>`;
         moveInstrumentation(row, article);
 
-        articles.push(article)
-      });
+        articles.push(article)*/
+
 
     const content = document.createRange().createContextualFragment(`
         <section class="hero-news">
             <div class="hero-news-content">
                 <div class="hero-news-subtitle">News & Innovations</div>
-                <h1 class="hero-news-title">Discover the latest from Nissan</h1>
-                <p class="hero-news-description">Stay informed about the latest innovations, events, and product launches from Nissan.</p>
+                <h1 class="hero-news-title">${config.title}</h1>
+                <p class="hero-news-description">${config.description}</p>
             </div>
         </section>
 
@@ -48,6 +47,12 @@ export default async function decorate(block) {
     `);
 
     block.textContent = '';
+
+    const imageScr = optimizeImageSrc(config.image);
+    const heroNews = content.querySelector('.hero-news');
+    heroNews.style.backgroundImage = `url(${imageScr})`;
+    heroNews.style.backgroundPosition = 'center';
+    heroNews.style.backgroundSize = 'cover';
 
     const articleList = content.querySelector('.article-list');
     articles.forEach(article => articleList.append(article));
