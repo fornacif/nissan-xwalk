@@ -16,11 +16,14 @@ export default function decorate(block) {
     var card = document.createElement('div');
     card.className = `grid-box ${wide}`;
     card.innerHTML = `
-        <img src="${imageSrc}" alt="Alt">
+        <div class="image-wrapper">
+            <img src="${imageSrc}" alt="Configure">
+        </div>
         <div class="box-content">
-            <h2 class="box-title" data-aue-prop="title" data-aue-type="text">${title}</h2>
+            <h2 class="box-title">${title}</h2>
             <div class="arrow"></div>
-        </div>`;
+        </div>
+    `;
     moveInstrumentation(row, card);
 
     cards.push(card)

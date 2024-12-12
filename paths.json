@@ -4,10 +4,10 @@
     "/content/nissan-xwalk/configuration:/.helix/config.json",
     "/content/nissan-xwalk/metadata:/metadata.json",
     "/content/nissan-xwalk/redirects:/redirects.json",
-    "/content/dam/nissan-xwalk/images/:/images/"
+    "/content/dam/nissan-xwalk/articles/:/articles/"
   ],
   "includes": [
     "/content/nissan-xwalk/",
-    "/content/dam/nissan-xwalk/images/"
+    "/content/dam/nissan-xwalk/articles/"
   ]
 }
