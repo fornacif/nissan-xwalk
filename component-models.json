@@ -265,24 +265,12 @@
         "value": "",
         "label": "Title",
         "valueType": "string"
-      }  
-    ]
-  },
-  {
-    "id": "article",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
       },
       {
         "component": "richtext",
-        "name": "title",
+        "name": "description",
         "value": "",
-        "label": "Title",
+        "label": "Description",
         "valueType": "string"
       }
     ]
