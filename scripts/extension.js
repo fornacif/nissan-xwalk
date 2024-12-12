@@ -1,5 +1,5 @@
 async function getConfigs() {
-    const configs = window.localStorage.getItem('configs');
+    const configs = window.sessionStorage.getItem('configs');
     if (configs) {
         return JSON.parse(configs);
     } else {
@@ -8,7 +8,7 @@ async function getConfigs() {
             throw new Error('Failed to fetch configs');
         }
         const configs = await response.json();
-        window.localStorage.setItem('configs', JSON.stringify(configs));
+        window.sessionStorage.setItem('configs', JSON.stringify(configs));
         return configs;
     }
 }
