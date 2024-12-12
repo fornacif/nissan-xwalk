@@ -1,10 +1,10 @@
 import { readBlockConfig } from '../../scripts/aem.js';
-import { optimizeImageSrc } from '../../scripts/extension.js';
+import { transformImageSrc } from '../../scripts/extension.js';
 
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
-    const background = optimizeImageSrc(config.background);
+    const background = await transformImageSrc(config.background);
     
     const content = document.createRange().createContextualFragment(`
         <section class="search-section" style="background: url('${background}') center/cover no-repeat">

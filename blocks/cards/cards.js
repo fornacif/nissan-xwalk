@@ -1,15 +1,15 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
-import { optimizeImageSrc } from '../../scripts/extension.js';
+import { transformImageSrc } from '../../scripts/extension.js';
 
-export default function decorate(block) {
+export default async function decorate(block) {
 
   const cards = [];
 
-  [...block.children].forEach((row) => {
+   for (const row of block.children) {
     const img = row.querySelector('img');
     const pElements = row.getElementsByTagName('p');
 
-    const imageSrc = img ? optimizeImageSrc(img.src) : "";
+    const imageSrc = img ? await transformImageSrc(img.src) : "";
     const title = pElements[0] ? pElements[0].textContent : "";
     const wide = pElements[1] && pElements[1].textContent == 'true' ? 'wide' : "";
 
@@ -27,7 +27,7 @@ export default function decorate(block) {
     moveInstrumentation(row, card);
 
     cards.push(card)
-  });
+  };
 
   const content = document.createRange().createContextualFragment(`
     <div class="grid-container"></div>

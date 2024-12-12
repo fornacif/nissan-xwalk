@@ -1,12 +1,12 @@
 import { readBlockConfig } from '../../scripts/aem.js';
-import { optimizeImageSrc } from '../../scripts/extension.js';
+import { transformImageSrc } from '../../scripts/extension.js';
 
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
-    const image1 = optimizeImageSrc(config.image1);
-    const image2 = optimizeImageSrc(config.image2);
-    const image3 = optimizeImageSrc(config.image3);
+    const image1 = await transformImageSrc(config.image1);
+    const image2 = await transformImageSrc(config.image2);
+    const image3 = await transformImageSrc(config.image3);
 
     const content = document.createRange().createContextualFragment(`
         <div class="hero-banner">
