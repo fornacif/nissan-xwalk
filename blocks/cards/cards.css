@@ -67,41 +67,53 @@
 
 .arrow {
   position: relative;
-  width: 60px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.arrow::before,
-.arrow::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  height: 2px;
-  width: 15px;
-  background: rgba(255, 255, 255, 0.2);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
 }
 
 .arrow::before {
-  transform: rotate(45deg);
-  transform-origin: right bottom;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  transform: translateX(-2px);
 }
 
 .arrow::after {
-  transform: rotate(-45deg);
-  transform-origin: right top;
+  content: '';
+  position: absolute;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(255, 255, 255, 0.6);
+  border-right: 2px solid rgba(255, 255, 255, 0.6);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
 }
 
 .grid-box:hover .arrow {
-  width: 70px;
   background: #ff4d4d;
+  border-color: #ff4d4d;
+  transform: translateX(5px);
 }
 
-.grid-box:hover .arrow::before,
+.grid-box:hover .arrow::before {
+  background: white;
+  width: 24px;
+}
+
 .grid-box:hover .arrow::after {
-  background: #ff4d4d;
+  border-color: white;
+  right: 13px;
 }
 
 @media (max-width: 1024px) {
