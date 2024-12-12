@@ -66,26 +66,41 @@
 }
 
 .arrow {
-  width: 48px;
-  height: 48px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.1);
+}
+
+.arrow::before,
+.arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 2px;
+  width: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
 .arrow::before {
-  content: '→';
-  color: white;
-  font-size: 1.4rem;
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+}
+
+.arrow::after {
+  transform: rotate(-45deg);
+  transform-origin: right top;
 }
 
 .grid-box:hover .arrow {
-  transform: translateX(5px);
-  border-color: #ff4d4d;
+  width: 70px;
+  background: #ff4d4d;
+}
+
+.grid-box:hover .arrow::before,
+.grid-box:hover .arrow::after {
   background: #ff4d4d;
 }
 
