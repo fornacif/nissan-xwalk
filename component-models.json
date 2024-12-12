@@ -299,9 +299,9 @@
       },
       {
         "component": "text",
-        "name": "cta",
+        "name": "subtitle",
         "value": "",
-        "label": "See all",
+        "label": "Subtitle",
         "valueType": "string"
       },
       {
