@@ -1,4 +1,5 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
+import { optimizeImageSrc } from '../../scripts/extension.js';
 
 export default async function decorate(block) {
 

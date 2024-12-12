@@ -1,4 +1,5 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
+import { optimizeImageSrc } from '../../scripts/extension.js';
 
 export default function decorate(block) {
 
@@ -8,7 +9,7 @@ export default function decorate(block) {
     const img = row.querySelector('img');
     const pElements = row.getElementsByTagName('p');
 
-    const imageSrc = img ? img.src.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high') : "";
+    const imageSrc = img ? optimizeImageSrc(img.src) : "";
     const title = pElements[0] ? pElements[0].textContent : "";
     const wide = pElements[1] && pElements[1].textContent == 'true' ? 'wide' : "";
 
