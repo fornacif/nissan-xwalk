@@ -1,4 +1,3 @@
-import { moveInstrumentation } from '../../scripts/scripts.js';
 import { readBlockConfig } from '../../scripts/aem.js';
 import { optimizeImageSrc } from '../../scripts/extension.js';
 
@@ -6,10 +5,6 @@ export default async function decorate(block) {
     const config = readBlockConfig(block);
 
     const articles = [];
-
-
-
-  
 
         /*var article = document.createElement('article');
         article.className = 'article-card';
