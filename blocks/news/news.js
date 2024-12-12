@@ -9,6 +9,9 @@ export default async function decorate(block) {
     for (const article of articles) {
         var articleElement = document.createElement('article');
         articleElement.className = 'article-card';
+        articleElement.setAttribute('data-aue-type', 'reference');
+        articleElement.setAttribute('data-aue-filter', 'cf');
+        articleElement.setAttribute('data-aue-resource', `urn:aemconnection:${article['_path']}/jcr:content/data/master`);
         const imageScr = await transformImageSrc(article.image['_path']);
         const dateString = await getValueByKey(article['_metadata'].calendarMetadata, 'jcr:created', 'name');
         const formattedDate = getFormattedDate(dateString);
@@ -18,8 +21,8 @@ export default async function decorate(block) {
                 <div class="article-date">${formattedDate}</div>
                 <span class="article-category">Services</span>
                 <h2 class="article-title" data-aue-prop="title" data-aue-type="text">${article.title}</h2>
-                <p class="article-excerpt">${article.description.html}</p>
-                <a href="#" class="article-link">Read more</a>
+                <p class="article-excerpt" data-aue-prop="description" data-aue-type="text">${article.description.html}</p>
+                <a href="#" class="article-link" data-aue-prop="description" data-aue-type="text">${article.cta}</a>
             </div>`;
             articleElements.push(articleElement)
     }
