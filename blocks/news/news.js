@@ -11,6 +11,7 @@ export default async function decorate(block) {
         articleElement.className = 'article-card';
         articleElement.setAttribute('data-aue-type', 'reference');
         articleElement.setAttribute('data-aue-filter', 'cf');
+        articleElement.setAttribute('data-aue-label', 'Article');
         articleElement.setAttribute('data-aue-resource', `urn:aemconnection:${article['_path']}/jcr:content/data/master`);
         const imageScr = await transformImageSrc(article.image['_path']);
         const dateString = await getValueByKey(article['_metadata'].calendarMetadata, 'jcr:created', 'name');
