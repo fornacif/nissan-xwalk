@@ -1,24 +1,40 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
-  /* change to ul, li */
-  const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    moveInstrumentation(row, li);
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
-    });
-    ul.append(li);
-  });
-  ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-    moveInstrumentation(img, optimizedPic.querySelector('img'));
-    img.closest('picture').replaceWith(optimizedPic);
-  });
+
+  const content = document.createRange().createContextualFragment(`
+    <div class="grid-container">
+        <div class="grid-box wide">
+            <img src="/api/placeholder/1400/400" alt="Business">
+            <div class="box-content">
+                <h2 class="box-title">Business</h2>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="grid-box">
+            <img src="/api/placeholder/600/400" alt="Used Vehicles">
+            <div class="box-content">
+                <h2 class="box-title">Used Vehicles</h2>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="grid-box">
+            <img src="/api/placeholder/600/400" alt="Accessories">
+            <div class="box-content">
+                <h2 class="box-title">Accessories</h2>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="grid-box wide">
+            <img src="/api/placeholder/1400/400" alt="Configure">
+            <div class="box-content">
+                <h2 class="box-title">Configure</h2>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div>
+  `);
+
   block.textContent = '';
   block.append(ul);
 }

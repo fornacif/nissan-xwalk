@@ -1,27 +1,128 @@
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.grid-box {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.grid-box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+.grid-box.wide {
+  grid-column: span 2;
 }
 
-.cards > ul > li img {
+.grid-box img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.grid-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, 
+      rgba(17, 24, 39, 0.95) 0%, 
+      rgba(17, 24, 39, 0.7) 30%, 
+      rgba(17, 24, 39, 0.3) 60%, 
+      rgba(17, 24, 39, 0) 100%);
+  pointer-events: none;
+}
+
+.box-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.arrow::before {
+  content: '→';
+  color: white;
+  font-size: 1.4rem;
+}
+
+.grid-box:hover .arrow {
+  transform: translateX(5px);
+  border-color: #ff4d4d;
+  background: #ff4d4d;
+}
+
+@media (max-width: 1024px) {
+  .grid-box {
+      height: 350px;
+  }
+
+  .box-title {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+  }
+
+  .grid-box.wide {
+      grid-column: span 1;
+  }
+
+  .grid-box {
+      height: 300px;
+  }
+
+  .box-content {
+      padding: 2rem;
+  }
+
+  .box-title {
+      font-size: 1.8rem;
+  }
+
+  .arrow {
+      width: 40px;
+      height: 40px;
+  }
 }
