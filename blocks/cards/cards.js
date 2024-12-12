@@ -8,7 +8,7 @@ export default function decorate(block) {
     const img = row.querySelector('img');
     const pElements = row.getElementsByTagName('p');
 
-    const imageSrc = img ? img.src : "";
+    const imageSrc = img ? img.src.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high') : "";
     const title = pElements[0] ? pElements[0].textContent : "";
     const wide = pElements[1] && pElements[1].textContent == 'true' ? 'wide' : "";
 
@@ -17,7 +17,7 @@ export default function decorate(block) {
     card.innerHTML = `
         <img src="${imageSrc}" alt="Alt">
         <div class="box-content">
-            <h2 class="box-title">${title}</h2>
+            <h2 class="box-title" data-aue-prop="title" data-aue-type="text">${title}</h2>
             <div class="arrow"></div>
         </div>`;
     moveInstrumentation(row, card);

@@ -3,9 +3,9 @@ import { readBlockConfig } from '../../scripts/aem.js';
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
-    const image1 = config.image1.replace('width=750&format=jpeg', 'width=2500&format=webp');
-    const image2 = config.image2.replace('width=750&format=jpeg', 'width=2500&format=webp');
-    const image3 = config.image3.replace('width=750&format=jpeg', 'width=2500&format=webp');
+    const image1 = config.image1.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high');
+    const image2 = config.image2.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high');
+    const image3 = config.image3.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high');
 
     const content = document.createRange().createContextualFragment(`
         <div class="hero-banner">
