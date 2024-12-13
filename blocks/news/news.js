@@ -1,5 +1,5 @@
 import { readBlockConfig } from '../../scripts/aem.js';
-import { getValueByKey, getFormattedDate, transformImageSrc, loadArticles } from '../../scripts/extension.js';
+import { getValueByKey, getFormattedDate, transformImageSrc, loadArticles } from '../../scripts/utils.js';
 
 export default async function decorate(block) {
     const config = readBlockConfig(block);

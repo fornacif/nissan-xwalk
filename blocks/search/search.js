@@ -1,5 +1,5 @@
 import { readBlockConfig } from '../../scripts/aem.js';
-import { transformImageSrc } from '../../scripts/extension.js';
+import { transformImageSrc } from '../../scripts/utils.js';
 
 export default async function decorate(block) {
     const config = readBlockConfig(block);
