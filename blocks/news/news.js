@@ -32,8 +32,8 @@ export default async function decorate(block) {
         <section class="hero-news">
             <div class="hero-news-content">
                 <div class="hero-news-subtitle">News & Innovations</div>
-                <h1 class="hero-news-title">${config.title}</h1>
-                <p class="hero-news-description">${config.description}</p>
+                <h1 class="hero-news-title" data-aue-prop="title" data-aue-type="text">${config.title}</h1>
+                <p class="hero-news-description" data-aue-prop="description" data-aue-type="richtext">${config.description}</p>
             </div>
         </section>
 
