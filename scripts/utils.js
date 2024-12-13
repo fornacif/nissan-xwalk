@@ -1,16 +1,9 @@
 async function getConfigs() {
-    const configs = window.sessionStorage.getItem('configs');
-    if (configs) {
-        return JSON.parse(configs);
-    } else {
-        const response = await fetch('/configs.json');
-        if (!response.ok) {
-            throw new Error('Failed to fetch configs');
-        }
-        const configs = await response.json();
-        window.sessionStorage.setItem('configs', JSON.stringify(configs));
-        return configs;
+    const response = await fetch('/configs.json');
+    if (!response.ok) {
+        throw new Error('Failed to fetch configs');
     }
+    return await response.json();
 }
 
 async function getConfigValueByKey(key) {
@@ -32,7 +25,8 @@ export function getFormattedDate(dateString) {
 }
 
 export async function loadArticles() {
-    const graphqlEndpoint = await getConfigValueByKey('graphql-endpoint');
+    const configKeyName = isAuthorMode ? 'author-graphql-endpoint' : 'publish-graphql-endpoint';
+    const graphqlEndpoint = await getConfigValueByKey(configKeyName);
     const timestamp = Date.now();
     const response = await fetch(`${graphqlEndpoint}/articles-all?timestamp=${timestamp}`);
     if (!response.ok) {
@@ -47,3 +41,5 @@ export async function transformImageSrc(imageSrc) {
     imageSrc = imageSrc.replace(`/content/dam/${siteName}`, '');
     return imageSrc.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high');
 }
+
+export const isAuthorMode = window.location.href.includes('.html');
