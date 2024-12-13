@@ -20,7 +20,7 @@ export default async function decorate(block) {
             <img src="${imageScr}" alt="Alt" class="article-image">
             <div class="article-content">
                 <div class="article-date">${formattedDate}</div>
-                <span class="article-category">${article.category}</span>
+                <span class="article-category" data-aue-prop="category" data-aue-type="text">${article.category}</span>
                 <h2 class="article-title" data-aue-prop="title" data-aue-type="text">${article.title}</h2>
                 <p class="article-excerpt" data-aue-prop="description" data-aue-type="richtext">${article.description.plaintext}</p>
                 <a href="#" class="article-link" data-aue-prop="cta" data-aue-type="text">${article.cta}</a>
