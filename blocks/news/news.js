@@ -31,7 +31,7 @@ export default async function decorate(block) {
     const content = document.createRange().createContextualFragment(`
         <section class="hero-news">
             <div class="hero-news-content">
-                <div class="hero-news-subtitle">News & Innovations</div>
+                <div class="hero-news-subtitle" data-aue-prop="category" data-aue-type="text">${config.category}</div>
                 <h1 class="hero-news-title" data-aue-prop="title" data-aue-type="text">${config.title}</h1>
                 <p class="hero-news-description" data-aue-prop="description" data-aue-type="richtext">${config.description}</p>
             </div>
