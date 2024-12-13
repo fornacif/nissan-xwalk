@@ -20,7 +20,7 @@ export default async function decorate(block) {
             <img src="${imageSrc}" alt="Configure">
         </div>
         <div class="box-content">
-            <h2 class="box-title">${title}</h2>
+            <h2 class="box-title" data-aue-prop="title" data-aue-type="text">${title}</h2>
             <div class="arrow"></div>
         </div>
     `;
