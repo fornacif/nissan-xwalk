@@ -5,14 +5,14 @@ export default async function decorate(block) {
 
     const content = document.createRange().createContextualFragment(`
     <nav class="nav-menu">
-        <a href="./home" class="nav-logo"><img src="${logoImage}"></img></a>
+        <a href="./home${isAuthorMode ? ".html" : ""}" class="nav-logo"><img src="${logoImage}"></img></a>
         <button class="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <ul class="nav-items">
-            <li><a href="./news" class="nav-item">News</a></li>
+            <li><a href="./news${isAuthorMode ? ".html" : ""}" class="nav-item">News</a></li>
             <li><a href="#" class="nav-item">Models</a></li>
             <li><a href="#" class="nav-item">Find a Dealer</a></li>
         </ul>
