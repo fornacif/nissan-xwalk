@@ -189,6 +189,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Test",
+          "id": "test",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block2/v1/bloc2",
+                "template": {
+                  "name": "Test",
+                  "model": "test"
+                }
+              }
+            }
+          }
         }
       ]
     }

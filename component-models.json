@@ -307,5 +307,17 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "test",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      }
+    ]
   }
 ]
