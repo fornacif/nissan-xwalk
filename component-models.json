@@ -323,7 +323,8 @@
         "name": "link",
         "value": "",
         "label": "Link",
-        "valueType": "string"
+        "valueType": "string",
+        "rootPath": "/content/nissan-xwalk"
       }
     ]
   }

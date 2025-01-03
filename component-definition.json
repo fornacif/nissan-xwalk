@@ -214,8 +214,7 @@
                 "resourceType": "core/franklin/components/block/v1/item",
                 "template": {
                   "name": "Menu Item",
-                  "model": "menu-item",
-                  "rootPath": "/content/nissan-xwalk"
+                  "model": "menu-item"
                 }
               }
             }
