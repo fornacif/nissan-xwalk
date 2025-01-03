@@ -324,7 +324,9 @@
         "value": "",
         "label": "Link",
         "valueType": "string",
-        "rootPath": "/content/nissan-xwalk"
+        "validation": {
+          "rootPath": "/content/nissan-xwalk"
+        }
       }
     ]
   }
