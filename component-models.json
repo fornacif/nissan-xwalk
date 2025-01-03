@@ -309,13 +309,20 @@
     ]
   },
   {
-    "id": "test",
+    "id": "menu-item",
     "fields": [
       {
         "component": "text",
-        "name": "title",
+        "name": "label",
         "value": "",
-        "label": "Title",
+        "label": "Label",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "value": "",
+        "label": "Link",
         "valueType": "string"
       }
     ]

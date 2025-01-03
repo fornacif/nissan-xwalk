@@ -18,7 +18,7 @@
       "cards",
       "columns",
       "fragment",
-      "test"
+      "menu"
     ]
   },
   {
@@ -37,6 +37,12 @@
     "id": "columns",
     "components": [
       "column"
+    ]
+  },
+  {
+    "id": "menu",
+    "components": [
+      "menu-item"
     ]
   },
   {
