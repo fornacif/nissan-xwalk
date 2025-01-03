@@ -309,7 +309,7 @@
     ]
   },
   {
-    "id": "menu-item",
+    "id": "menu",
     "fields": [
       {
         "component": "text",
