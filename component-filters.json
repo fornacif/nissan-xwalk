@@ -46,6 +46,12 @@
     ]
   },
   {
+    "id": "menu-item",
+    "components": [
+      "menu-item"
+    ]
+  },
+  {
     "id": "column",
     "components": [
       "text",
