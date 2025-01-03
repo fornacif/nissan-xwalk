@@ -2,7 +2,8 @@
   {
     "id": "main",
     "components": [
-      "section"
+      "section",
+      "menu"
     ]
   },
   {
@@ -42,6 +43,7 @@
   {
     "id": "menu",
     "components": [
+      "menu",
       "menu-item"
     ]
   },
