@@ -200,7 +200,7 @@
                 "template": {
                   "name": "Menu",
                   "model": "menu",
-                  "filter": "menu"
+                  "filter": "section"
                 }
               }
             }
