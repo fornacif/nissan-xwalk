@@ -9,7 +9,6 @@
   {
     "id": "section",
     "components": [
-      "section",
       "text",
       "image",
       "button",
@@ -20,12 +19,6 @@
       "cards",
       "columns",
       "fragment"
-    ]
-  },
-  {
-    "id": "menu",
-    "components": [
-      "menu-item"
     ]
   },
   {
@@ -48,12 +41,6 @@
   },
   {
     "id": "menu",
-    "components": [
-      "menu-item"
-    ]
-  },
-  {
-    "id": "menu-item",
     "components": [
       "menu-item"
     ]
