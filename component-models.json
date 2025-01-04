@@ -316,7 +316,8 @@
         "label": "Container",
         "name": "container",
         "valueType": "string",
-        "collapsible": true,
+        "collapsible": false,
+        "multi": false,
         "fields": [
           {
             "component": "text",
