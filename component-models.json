@@ -316,7 +316,8 @@
         "name": "label",
         "value": "",
         "label": "Label",
-        "valueType": "string"
+        "valueType": "string",
+        "multi": true
       },
       {
         "component": "aem-content",
