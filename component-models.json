@@ -313,11 +313,65 @@
     "fields": [
       {
         "component": "container",
-        "label": "Container",
-        "name": "container",
+        "label": "Link 1",
+        "name": "link1",
         "valueType": "string",
         "collapsible": true,
-        "multi": true,
+        "multi": false,
+        "fields": [
+          {
+            "component": "text",
+            "name": "label",
+            "value": "",
+            "label": "Label",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "value": "",
+            "label": "Link",
+            "valueType": "string",
+            "validation": {
+              "rootPath": "/content/nissan-xwalk"
+            }
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Link 2",
+        "name": "link2",
+        "valueType": "string",
+        "collapsible": true,
+        "multi": false,
+        "fields": [
+          {
+            "component": "text",
+            "name": "label",
+            "value": "",
+            "label": "Label",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "value": "",
+            "label": "Link",
+            "valueType": "string",
+            "validation": {
+              "rootPath": "/content/nissan-xwalk"
+            }
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Link 3",
+        "name": "link3",
+        "valueType": "string",
+        "collapsible": true,
+        "multi": false,
         "fields": [
           {
             "component": "text",
