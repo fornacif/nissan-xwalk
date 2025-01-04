@@ -3,7 +3,7 @@
     "id": "main",
     "components": [
       "section",
-      "menu"
+      "nav"
     ]
   },
   {
@@ -37,13 +37,6 @@
     "id": "columns",
     "components": [
       "column"
-    ]
-  },
-  {
-    "id": "menu",
-    "components": [
-      "menu",
-      "menu-item"
     ]
   },
   {
