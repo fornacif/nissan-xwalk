@@ -317,14 +317,14 @@
         "name": "container",
         "valueType": "string",
         "collapsible": true,
+        "multi": true,
         "fields": [
           {
             "component": "text",
             "name": "label",
             "value": "",
             "label": "Label",
-            "valueType": "string",
-            "multi": true
+            "valueType": "string"
           },
           {
             "component": "aem-content",
