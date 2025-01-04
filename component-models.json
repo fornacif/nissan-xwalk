@@ -312,22 +312,31 @@
     "id": "nav",
     "fields": [
       {
-        "component": "text",
-        "name": "label",
-        "value": "",
-        "label": "Label",
+        "component": "container",
+        "label": "Container",
+        "name": "container",
         "valueType": "string",
-        "multi": true
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "value": "",
-        "label": "Link",
-        "valueType": "string",
-        "validation": {
-          "rootPath": "/content/nissan-xwalk"
-        }
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "label",
+            "value": "",
+            "label": "Label",
+            "valueType": "string",
+            "multi": true
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "value": "",
+            "label": "Link",
+            "valueType": "string",
+            "validation": {
+              "rootPath": "/content/nissan-xwalk"
+            }
+          }
+        ]
       }
     ]
   }
