@@ -3,12 +3,12 @@
     "id": "main",
     "components": [
       "section",
-      "nav"
     ]
   },
   {
     "id": "section",
     "components": [
+      "nav",
       "text",
       "image",
       "button",
