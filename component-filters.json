@@ -2,13 +2,13 @@
   {
     "id": "main",
     "components": [
-      "section"
+      "section",
+      "nav"
     ]
   },
   {
     "id": "section",
     "components": [
-      "nav",
       "text",
       "image",
       "button",
