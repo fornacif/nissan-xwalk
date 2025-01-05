@@ -1,8 +1,12 @@
 import { isAuthorMode } from '../../scripts/utils.js';
+import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
     let logoImage = isAuthorMode ? '/content/nissan-xwalk.resource/icons/logo.svg': '/icons/logo.svg';
     const urlExtension = isAuthorMode ? ".html" : "";
+
+    const navFragment = await loadFragment("/nav");
+    console.log(navFragment);
 
     const content = document.createRange().createContextualFragment(`
     <nav class="nav-menu">
