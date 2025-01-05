@@ -33,7 +33,20 @@ export async function loadArticles() {
         throw new Error('Failed to fetch articles');
     }
     const result = await response.json();
-    return result.data.articleList.items
+    return result.data.articleList.items;
+}
+
+export async function loadNav() {
+    const configKeyName = isAuthorMode ? 'author-graphql-endpoint' : 'publish-graphql-endpoint';
+    const graphqlEndpoint = await getConfigValueByKey(configKeyName);
+    const timestamp = Date.now();
+    const response = await fetch(`${graphqlEndpoint}/nav-all?timestamp=${timestamp}`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch nav items');
+    }
+    const result = await response.json();
+    const navItems = result.data.navList.items;
+    return navItems.filter(navItem => navItem.link != '/');
 }
 
 export async function transformImageSrc(imageSrc) {

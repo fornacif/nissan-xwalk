@@ -1,4 +1,4 @@
-import { isAuthorMode } from '../../scripts/utils.js';
+import { isAuthorMode, loadNav } from '../../scripts/utils.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
@@ -18,25 +18,26 @@ export default async function decorate(block) {
     block.textContent = '';
     block.append(content);
 
-    const navFragment = await loadFragment("/nav");
-    const navElements = navFragment.querySelectorAll('li');
-    for (const navElement of navElements) {
-        navElement.firstChild.className = "nav-item";
-        navElement.firstChild.href += urlExtension;
-    }
-
-    const hamburgerElement = document.querySelector('button');
-    for (let i = 0; i < navElements.length; i++) {
-        const span = document.createElement('span');
-        hamburgerElement.appendChild(span);
-    }
-
-    block.querySelector('.nav-items').append(...navElements);
-
-    // Mobile menu functionality
     const hamburger = document.querySelector('.hamburger');
     const navItems = document.querySelector('.nav-items');
 
+    const navElements = await loadNav();
+    for (const navElement of navElements) {
+        const newLiElement = document.createElement('li');
+        const newLinkElement = document.createElement('a');
+        newLinkElement.href = navElement.link + urlExtension;
+        newLinkElement.textContent = navElement.label;
+        newLinkElement.className = "nav-item";
+        newLiElement.appendChild(newLinkElement);
+        navItems.appendChild(newLiElement);
+    }
+
+    for (let i = 0; i < navElements.length; i++) {
+        const span = document.createElement('span');
+        hamburger.appendChild(span);
+    }
+
+    // Mobile menu functionality
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navItems.classList.toggle('active');
