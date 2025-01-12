@@ -1,5 +1,4 @@
 import { isAuthorMode, loadNav } from '../../scripts/utils.js';
-import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
     let logoImage = isAuthorMode ? '/content/nissan-xwalk.resource/icons/logo.svg': '/icons/logo.svg';

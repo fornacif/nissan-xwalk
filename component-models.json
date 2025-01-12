@@ -307,16 +307,5 @@
         "multi": false
       }
     ]
-  },
-  {
-    "id": "nav",
-    "fields": [
-      {
-        "component": "richtext",
-        "label": "Content",
-        "name": "content",
-        "valueType": "string"
-      }
-    ]
   }
 ]
