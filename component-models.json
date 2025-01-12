@@ -307,5 +307,9 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "nav",
+    "fields": []
   }
 ]
