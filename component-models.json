@@ -305,6 +305,12 @@
         "name": "background",
         "label": "Background Image",
         "multi": false
+      },
+      {
+        "component": "sku",
+        "valueType": "string",
+        "name": "sku",
+        "label": "SKU"
       }
     ]
   },
