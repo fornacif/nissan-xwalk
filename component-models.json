@@ -305,7 +305,16 @@
         "name": "background",
         "label": "Background Image",
         "multi": false
-      },
+      }
+    ]
+  },
+  {
+    "id": "nav",
+    "fields": []
+  },
+  {
+    "id": "product",
+    "fields": [
       {
         "component": "sku",
         "valueType": "string",
@@ -313,9 +322,5 @@
         "label": "SKU"
       }
     ]
-  },
-  {
-    "id": "nav",
-    "fields": []
   }
 ]
