@@ -52,8 +52,8 @@ export async function loadNav() {
 export async function transformImageSrc(imageSrc) {
     const siteName = await getConfigValueByKey('site-name');
     imageSrc = imageSrc.replace(`/content/dam/${siteName}`, '');
-    imageSrc = imageSrc.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high');
-    imageSrc = imageSrc.replace('width=750&format=png&optimize=medium', 'format=webp&optimize=high');
+    imageSrc = imageSrc.replace('width=750&format=jpeg&optimize=medium', 'width=2000&format=webp&optimize=high');
+    imageSrc = imageSrc.replace('width=750&format=png&optimize=medium', 'width=2000&format=webp&optimize=high');
     return imageSrc;
 }
 
