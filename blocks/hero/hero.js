@@ -5,6 +5,7 @@ export default async function decorate(block) {
     const config = readBlockConfig(block);
 
     const image1 = await transformImageSrc(config.image1);
+    console.log(block);
     const image2 = await transformImageSrc(config.image2);
     const image3 = await transformImageSrc(config.image3);
 
@@ -12,7 +13,7 @@ export default async function decorate(block) {
         <div class="hero-banner">
             <div class="carousel">
                 <div class="slide active">
-                    <img src="${image1}" alt="${config.title1}" class="slide-image">
+                    <img loading="lazy" src="${image1}" alt="${config.title1}" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">${config.title1}</h2>
                         <p class="slide-price">${config.subtitle1}</p>
@@ -57,8 +58,8 @@ export default async function decorate(block) {
         </div>
     `);
 
-    block.textContent = '';
-    block.append(content);
+    //block.textContent = '';
+    //block.append(content);
 
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.carousel-dot');
