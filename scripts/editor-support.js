@@ -110,6 +110,6 @@ attachEventListners(document.querySelector('main'));
 document.querySelectorAll('.cards > div').forEach((card) => {
   const title = card.querySelector('[data-aue-label="Title"]');
   if (title) {
-    card.setAttribute('data-aue-label', title.textContent);
+    card.setAttribute('data-aue-label', `Card - ${title.textContent});
   }
 });
