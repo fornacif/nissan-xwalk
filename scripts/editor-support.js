@@ -109,6 +109,7 @@ attachEventListners(document.querySelector('main'));
 // the text content and set it as data-aue-label
 document.querySelectorAll('.card').forEach((card) => {
   const heading = card.querySelector('h2, h3, h4, h5, h6');
+  console.log(heading);
   if (heading) {
     card.setAttribute('data-aue-label', heading.textContent);
   }
