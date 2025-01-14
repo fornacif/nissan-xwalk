@@ -12,7 +12,7 @@ export default async function decorate(block) {
         <div class="hero-banner">
             <div class="carousel">
                 <div class="slide active">
-                    <img loading="lazy" src="${image1}" alt="${config.title1}" class="slide-image">
+                    <img src="${image1}" alt="${config.title1}" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">${config.title1}</h2>
                         <p class="slide-price">${config.subtitle1}</p>
@@ -23,7 +23,7 @@ export default async function decorate(block) {
                     </div>
                 </div>
                 <div class="slide">
-                    <img loading="lazy" src="${image2}" alt="${config.title2}" class="slide-image">
+                    <img src="${image2}" alt="${config.title2}" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">${config.title2}</h2>
                         <p class="slide-price">${config.subtitle3}</p>
@@ -34,7 +34,7 @@ export default async function decorate(block) {
                     </div>
                 </div>
                 <div class="slide">
-                    <img loading="lazy" src="${image3}" alt="${config.title3}" class="slide-image">
+                    <img src="${image3}" alt="${config.title3}" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">${config.title3}</h2>
                         <p class="slide-price">${config.subtitle3}</p>
