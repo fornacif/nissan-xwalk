@@ -52,6 +52,7 @@ async function applyChanges(event) {
         decorateIcons(newBlock);
         decorateBlock(newBlock);
         decorateRichtext(newBlock);
+        updateCardTitles();
         await loadBlock(newBlock);
         block.remove();
         newBlock.style.display = null;
