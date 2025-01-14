@@ -52,7 +52,9 @@ export async function loadNav() {
 export async function transformImageSrc(imageSrc) {
     const siteName = await getConfigValueByKey('site-name');
     imageSrc = imageSrc.replace(`/content/dam/${siteName}`, '');
-    return imageSrc.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high');
+    imageSrc = imageSrc.replace('width=750&format=jpeg&optimize=medium', 'format=webp&optimize=high');
+    imageSrc = imageSrc.replace('width=750&format=png&optimize=medium', 'format=webp&optimize=high');
+    return imageSrc;
 }
 
 export const isAuthorMode = window.location.href.includes('.html');
