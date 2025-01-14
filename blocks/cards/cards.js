@@ -14,7 +14,7 @@ export default async function decorate(block) {
     const wide = pElements[1] && pElements[1].textContent == 'true' ? 'wide' : "";
 
     var card = document.createElement('div');
-    card.className = `grid-box ${wide}`;
+    card.className = `grid-box ${wide} cards`;
     card.innerHTML = `
         <div class="image-wrapper">
             <img loading="lazy" src="${imageSrc}" alt="Configure">
