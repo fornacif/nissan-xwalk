@@ -98,6 +98,7 @@ function attachEventListners(main) {
     'aue:content-copy',
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
     event.stopPropagation();
+    updateCardTitles();
     const applied = await applyChanges(event);
     if (!applied) window.location.reload();
   }));
@@ -105,11 +106,15 @@ function attachEventListners(main) {
 
 attachEventListners(document.querySelector('main'));
 
-// get all cards on page and find the first heading and take
-// the text content and set it as data-aue-label
-document.querySelectorAll('.cards > div').forEach((card) => {
-  const title = card.querySelector('[data-aue-label="Title"]');
-  if (title) {
-    card.setAttribute('data-aue-label', `Card - ${title.textContent}`);
-  }
-});
+
+
+function updateCardTitles() {
+  document.querySelectorAll('.cards > div').forEach((card) => {
+    const title = card.querySelector('[data-aue-label="Title"]');
+    if (title) {
+      card.setAttribute('data-aue-label', `Card - ${title.textContent}`);
+    }
+  });
+}
+
+updateCardTitles();
