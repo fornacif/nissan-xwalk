@@ -57,8 +57,8 @@ export async function transformImageSrc(imageSrc) {
         imageSrc = imageSrc.replace('width=750', 'width=2000');
     }
 
-    imageSrc = imageSrc.replace('format=jpeg&optimize=medium', 'format=webp&optimize=high');
-    imageSrc = imageSrc.replace('format=png&optimize=medium', 'format=webp&optimize=high');
+    imageSrc = imageSrc.replace('format=jpeg&optimize=medium', 'format=webply&optimize=high');
+    imageSrc = imageSrc.replace('format=png&optimize=medium', 'format=webply&optimize=high');
 
     return imageSrc;
 }
