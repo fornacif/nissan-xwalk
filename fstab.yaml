@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p34570-e1263228.adobeaemcloud.com/bin/franklin.delivery/fornacif/nissan-xwalk/main"
+    url: "https://author-p34570-e1263228.adobeaemcloud.com/bin/franklin.delivery/fornacif/nissan-xwalk/green"
     type: "markup"
     suffix: ".html"
