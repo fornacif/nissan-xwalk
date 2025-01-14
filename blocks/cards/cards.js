@@ -17,7 +17,7 @@ export default async function decorate(block) {
     card.className = `grid-box ${wide}`;
     card.innerHTML = `
         <div class="image-wrapper">
-            <img src="${imageSrc}" alt="Configure">
+            <img loading="lazy" src="${imageSrc}" alt="Configure">
         </div>
         <div class="box-content">
             <h2 class="box-title" data-aue-prop="title" data-aue-type="text">${title}</h2>
