@@ -4,9 +4,9 @@ import { transformImageSrc } from '../../scripts/utils.js';
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 
-    const image1 = await transformImageSrc(config.image1);
-    const image2 = await transformImageSrc(config.image2);
-    const image3 = await transformImageSrc(config.image3);
+    const image1 = config.image1;
+    const image2 = config.image2;
+    const image3 = config.image3;
 
     const content = document.createRange().createContextualFragment(`
         <div class="hero-banner">
