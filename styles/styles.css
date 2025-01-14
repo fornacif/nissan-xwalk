@@ -1,3 +1,5 @@
+@import './constants.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -51,12 +53,12 @@ body {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #ff4d4d;
+  background-color: var(--primary-color);
   transition: width 0.3s ease;
 }
 
 .nav-item:hover {
-  color: #ff4d4d;
+  color: var(--primary-color);
 }
 
 .nav-item:hover:after {
@@ -192,7 +194,7 @@ body {
 }
 
 .search-bar:focus {
-  border-color: #ff4d4d;
+  border-color: var(--primary-color);
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
 }
@@ -217,15 +219,15 @@ body {
 }
 
 .filter-button:hover {
-  background: #ff4d4d;
-  border-color: #ff4d4d;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
   color: white;
   box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
 }
 
 .filter-button.active {
-  background: #ff4d4d;
-  border-color: #ff4d4d;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
   color: white;
   box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
 }
@@ -336,7 +338,7 @@ body {
     bottom: -0.5rem;
     width: 40px;
     height: 2px;
-    background-color: #ff4d4d;
+    background-color: var(--primary-color);
 }
 
 .footer-links {
@@ -356,7 +358,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: #ff4d4d;
+    color: var(--primary-color);
 }
 
 .footer-social {
@@ -377,7 +379,7 @@ body {
 }
 
 .social-icon:hover {
-    background: #ff4d4d;
+    background: var(--primary-color);
     transform: translateY(-3px);
 }
 
@@ -405,7 +407,7 @@ body {
 }
 
 .footer-legal a:hover {
-    color: #ff4d4d;
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -513,7 +515,7 @@ body {
 }
 
 .cta-primary {
-  background-color: #ff4d4d;
+  background-color: var(--primary-color);
   color: white;
 }
 
