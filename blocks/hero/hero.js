@@ -5,7 +5,6 @@ export default async function decorate(block) {
     const config = readBlockConfig(block);
 
     const image1 = await transformImageSrc(config.image1);
-    console.log(block);
     const image2 = await transformImageSrc(config.image2);
     const image3 = await transformImageSrc(config.image3);
 
@@ -58,8 +57,8 @@ export default async function decorate(block) {
         </div>
     `);
 
-    //block.textContent = '';
-    //block.append(content);
+    block.textContent = '';
+    block.append(content);
 
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.carousel-dot');
