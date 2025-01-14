@@ -98,15 +98,12 @@ function attachEventListners(main) {
     'aue:content-copy',
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
     event.stopPropagation();
-    updateCardTitles();
     const applied = await applyChanges(event);
     if (!applied) window.location.reload();
   }));
 }
 
 attachEventListners(document.querySelector('main'));
-
-
 
 function updateCardTitles() {
   document.querySelectorAll('.cards > div').forEach((card) => {
