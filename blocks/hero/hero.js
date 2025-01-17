@@ -12,7 +12,7 @@ export default async function decorate(block) {
         <div class="hero-banner">
             <div class="carousel">
                 <div class="slide active">
-                    <img src="qsd" alt="${config.title1}" class="slide-image">
+                    <img src="${image1}" alt="${config.title1}" class="slide-image">
                     <div class="slide-content">
                         <h2 class="slide-title">${config.title1}</h2>
                         <p class="slide-price">${config.subtitle1}</p>
