@@ -50,8 +50,12 @@ export async function loadNav() {
 }
 
 export async function transformImageSrc(imageSrc) {
+    if (isAuthorMode) {
+        return imageSrc;
+    }
+
     const siteName = await getConfigValueByKey('site-name');
-    //imageSrc = imageSrc.replace(`/content/dam/${siteName}`, '');
+    imageSrc = imageSrc.replace(`/content/dam/${siteName}`, '');
 
     if (window.innerWidth > 600) {
         imageSrc = imageSrc.replace('width=750', 'width=2000');
